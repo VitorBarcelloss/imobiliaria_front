@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#page{
+    display: flex;
+}
+
+#imagem{
+    height: 100%;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+}
+
+#imagem img{
+    height: 100%;
+    width: 100%;
+}
+
+#cadastro{
+    display: flex;
+    flex-direction: column;
+    background-color: #E07E36;
+    margin:0;
+    padding: 0;
+    color: white;
+    align-items: center;
+    width: 20%;
+    
+}
+
+#cadastro h4{
+    font-size: 30px;
+    margin-top: 100px;
+}
+
+
+#nome{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#nome label{
+    font-size: 20px;
+}
+
+#nome input{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+#creci{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#creci label{
+    font-size: 20px;
+}
+
+#creci input{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+#endereco{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#endereco label{
+    font-size: 20px;
+}
+
+#endereco input{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+#email{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#email label{
+    font-size: 20px;
+}
+
+#email input{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+#telefone{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#telefone label{
+    font-size: 20px;
+}
+
+#telefone input{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+#senha{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#senha label{
+    font-size: 20px;
+}
+
+#senha input{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+#cadastro button{
+    margin-top: 35px;
+    width: 125px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+

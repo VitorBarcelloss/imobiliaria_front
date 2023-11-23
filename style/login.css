@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#page{
+    display: flex;
+}
+
+#imagem{
+    height: 100%;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+}
+
+#imagem img{
+    height: 100%;
+    width: 100%;
+}
+
+#login{
+    display: flex;
+    flex-direction: column;
+    background-color: #E07E36;
+    margin:0;
+    padding: 0;
+    color: white;
+    align-items: center;
+    width: 20%;
+    
+}
+
+#login h4{
+    font-size: 30px;
+    margin-top: 200px;
+}
+
+#user{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+#user label{
+    font-size: 20px;
+}
+
+#user input{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+#senha{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#senha label{
+    font-size: 20px;
+}
+
+#senha input{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+#login button{
+    margin-top: 35px;
+    width: 125px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+

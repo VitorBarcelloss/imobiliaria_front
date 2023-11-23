@@ -1,0 +1,91 @@
+<head>
+    <link rel="stylesheet" href="../style/anuncios.css">
+    <script src="../js/bt-entrar.js"></script>
+    <title>Imobiliaria</title>
+</head>
+<body>
+    <header id="header">
+        <div id="logo">
+            <h2>LOGO</h2>
+        </div>
+        <div id="opt">
+            <a href="home.html">Home</a>
+            <a href="#">Anuncios</a>
+            <a href="contato.html">Contato</a>
+        </div>
+        <div id="entrar">
+            <button id="bt-entrar">Perfil</button>
+            <div id="menuSuspenso" style="display: none;">
+                <ul>
+                  <li><a href="#">Meu perfil</a></li>
+                  <li><a href="#">Mensagem</a></li>
+                  <li><a href="login.html">Sair</a></li>
+                </ul>
+              </div>
+        </div>
+    </header>
+    <div id="total">
+        <div id="titulo-total">
+            <h2>Todos imoveis</h2>
+        </div>
+        <div id="pesquisar">
+            <input placeholder="Ex.: Imovel, Proprietario, tipo de alocação...">
+            <button>Pesquisar</button>
+        </div>
+        <div id="filtro">
+            <input placeholder="area total">
+            <input placeholder="preço min.">
+            <input placeholder="preço max.">
+            <select id="tipo-imovel">
+                <option value="casa">casa</option>
+                <option value="kitnet">kitnet</option>
+                <option value="apartamento">apartamento</option>
+            </select>
+            <select id="tipo-alocacao">
+                <option value="venda">venda</option>
+                <option value="aluguel">aluguel</option>
+            </select>
+            <select id="mobilia">
+                <option value="mobiliado">mobiliado</option>
+                <option value="semi-mobiliado">semi-mobiliado</option>
+                <option value="sem mobilia">sem mobilia</option>
+            </select>
+            <label for="relevancia">Relevancia</label>
+            <input type="checkbox" id="relevancia" name="relevancia" value="true">
+            
+            <button>Filtrar</button>            
+        </div>
+            <div id="secao-total">
+                <div id="imovel-todos">
+                    <img src="https://s2.glbimg.com/hgr-hkZrLEUkH7htrD4XmdHO5lg=/512x320/smart/e.glbimg.com/og/ed/f/original/2015/04/16/casa-juliana-pippi-florianopolis-01.jpg">
+                    <h4>R$ 2.000,00</h4>
+                    <p>Titulo</p>
+                    <div id="local">
+                    <p>Localização</p>
+                    <button>ver mais -></button>
+                    </div>
+                </div>
+                <div id="imovel-todos">
+                    <img src="https://s2.glbimg.com/hgr-hkZrLEUkH7htrD4XmdHO5lg=/512x320/smart/e.glbimg.com/og/ed/f/original/2015/04/16/casa-juliana-pippi-florianopolis-01.jpg">
+                    <h4>R$ 2.000,00</h4>
+                    <p>Titulo</p>
+                    <div id="local">
+                    <p>Localização</p>
+                    <button>ver mais -></button>
+                    </div>
+                </div>
+                <div id="imovel-todos">
+                    <img src="https://s2.glbimg.com/hgr-hkZrLEUkH7htrD4XmdHO5lg=/512x320/smart/e.glbimg.com/og/ed/f/original/2015/04/16/casa-juliana-pippi-florianopolis-01.jpg">
+                    <h4>R$ 2.000,00</h4>
+                    <p>Titulo</p>
+                    <div id="local">
+                    <p>Localização</p>
+                    <button>ver mais -></button>
+                    </div>
+                </div>
+        </div>
+    </div>   
+    <div id="footer">
+        <p>Todos os direitos reservados Imoveis © 2023.</p>
+    </div>
+</body>

@@ -1,0 +1,162 @@
+body {
+    margin: 0; /* Remove margens padrão do corpo */
+    padding: 0;
+    height: 100%;
+}
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E07E36;
+    margin-bottom: 0;
+}
+#logo{
+    margin-left: 200px;
+}
+#opt {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+}
+
+#opt a{
+    color: #000000; 
+    text-decoration: none;
+}
+
+#opt a:hover{
+    color: #f5f5f5; 
+    text-decoration: none;
+}
+
+#entrar{
+    margin-right: 200px;
+    display: flex;
+    gap:10px
+}
+
+#entrar button{
+    padding: 10px 30px;
+    border-radius: 8px; 
+    background-color: #EAB28A; 
+    color: rgb(0, 0, 0); 
+    border: none; 
+    cursor: pointer;
+}
+#menuSuspenso {
+    display: none;
+    padding: 2px;
+    background-color: #E07E36;
+    
+  }
+  #menuSuspenso ul{
+    display: flex;
+    gap:15px;
+    list-style: none;
+  }
+
+#total{
+    margin-top: 15px;
+    text-align: center; 
+    margin-bottom: 10.5%;
+}
+
+#titulo-total{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#pesquisar{
+    margin-bottom: 20px;
+}
+
+#pesquisar input{
+    width: 600px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+#pesquisar button{
+    height: 30px;
+    width: 100px;
+    border-radius: 15px;
+    background-color: #E07E36;
+    cursor: pointer;
+}
+
+#filtro{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#filtro input{
+    height: 20px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+#filtro select{
+    height: 25px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+#secao-total {
+    display: flex; 
+}
+
+#imovel-todos {
+    margin-left: 280px; 
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    position: relative; 
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: #EAB28A;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+#imovel-todos img {
+    width: calc(100% - 10px); 
+    height: auto; 
+    display: block; 
+    margin: 0 auto 0; 
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+}
+
+
+#imovel-todos p {
+    margin-top: 20px; 
+}
+
+#imovel-todos h4{
+    margin-top: 8px;
+    font-size: 18px;
+    text-align: left;
+}
+
+#local {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 36px;
+}
+
+#local p {
+    text-align: left;
+    margin-right: auto; 
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E07E36;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}

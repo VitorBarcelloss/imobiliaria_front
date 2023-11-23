@@ -1,0 +1,172 @@
+body {
+    margin: 0; /* Remove margens padrão do corpo */
+    padding: 0;
+    height: 100%;
+}
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E07E36;
+    margin-bottom: 0;
+}
+#logo{
+    margin-left: 200px;
+}
+#opt {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+}
+
+#opt a{
+    color: #000000; 
+    text-decoration: none;
+}
+
+#opt a:hover{
+    color: #f5f5f5; 
+    text-decoration: none;
+}
+
+#entrar{
+    margin-right: 200px;
+    display: flex;
+    gap:10px
+}
+
+#entrar button{
+    padding: 10px 30px;
+    border-radius: 8px; 
+    background-color: #EAB28A; 
+    color: rgb(0, 0, 0); 
+    border: none; 
+    cursor: pointer;
+}
+#menuSuspenso {
+    display: none;
+    padding: 2px;
+    background-color: #E07E36;
+    
+  }
+  #menuSuspenso ul{
+    display: flex;
+    gap:15px;
+    list-style: none;
+  }
+
+#titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#titulo h4{
+    font-size: 25px;
+    padding-top: 30px;
+    margin-bottom: 5px;
+}
+#titulo p{
+    font-size: 15px;
+}
+
+#contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 10.5%;
+}
+
+#linha-um{
+    display: flex;
+    gap: 25px;
+}
+
+#nome{
+    display: flex;
+    flex-direction: column;
+}
+
+#nome input{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+#sobrenome{
+    display: flex;
+    flex-direction: column;
+}
+
+#sobrenome input{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+#linha-dois{
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+#email{
+    display: flex;
+    flex-direction: column;
+}
+
+#email input{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+#telefone{
+    display: flex;
+    flex-direction: column;
+}
+
+#telefone input{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+#mensagem{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#mensagem input{
+    width: 620px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    text-align: left;
+    vertical-align: top;
+}
+
+#contato button{
+    margin-top: 40px;
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #E07E36;
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E07E36;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
