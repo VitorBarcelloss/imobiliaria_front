@@ -1,0 +1,92 @@
+body {
+    margin: 0; /* Remove margens padrão do corpo */
+    padding: 0;
+    height: 100%;
+}
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E07E36;
+    margin-bottom: 0;
+}
+#logo{
+    margin-left: 200px;
+}
+#opt {
+    
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+}
+
+#opt a{
+    color: #000000; 
+    text-decoration: none;
+}
+
+#opt a:hover{
+    color: #f5f5f5; 
+    text-decoration: none;
+}
+
+#entrar{
+    margin-right: 200px;
+    display: flex;
+    gap:10px
+}
+
+#entrar button{
+    padding: 10px 30px;
+    border-radius: 8px; 
+    background-color: #EAB28A; 
+    color: rgb(0, 0, 0); 
+    border: none; 
+    cursor: pointer;
+}
+#menuSuspenso {
+    display: none;
+    padding: 2px;
+    background-color: #E07E36;
+    
+  }
+  #menuSuspenso ul{
+    display: flex;
+    gap:15px;
+    list-style: none;
+  }
+
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E07E36;
+}
+
+
+#caixa {
+    width: 711px;
+    height: 660px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #E07E36;
+    box-shadow: 0px 0px 10px 0px rgba
+    (0, 0, 0, 0.25);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 31%;
+    margin-right: 100px;
+
+  }
+
+  #cadastrar:hover{
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+
+  

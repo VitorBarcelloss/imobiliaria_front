@@ -3,6 +3,9 @@
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="../style/home.css">
     <script src="../js/bt-entrar.js"></script>
+    <script src="../js/listar-todos.js"></script>
+    <script src="../js/listar-relevancia.js"></script>
+    <script src="../js/pesquisar-imovel.js"></script>
     <title>Imobiliaria</title>
 </head>
 <body>
@@ -41,33 +44,7 @@
             <h2>Imoveis em destaque</h2>
         </div>
         <div id="secao-destaque">
-            <div id="imovel-destaque">
-                <img src="https://s2.glbimg.com/hgr-hkZrLEUkH7htrD4XmdHO5lg=/512x320/smart/e.glbimg.com/og/ed/f/original/2015/04/16/casa-juliana-pippi-florianopolis-01.jpg">
-                <h4>R$ 2.000,00</h4>
-                <p>Titulo</p>
-                <div id="local">
-                    <p>Localização</p>
-                    <button>ver mais -></button>
-                </div>
-            </div>
-            <div id="imovel-destaque">
-                <img src="https://s2.glbimg.com/hgr-hkZrLEUkH7htrD4XmdHO5lg=/512x320/smart/e.glbimg.com/og/ed/f/original/2015/04/16/casa-juliana-pippi-florianopolis-01.jpg">
-                <h4>R$ 2.000,00</h4>
-                <p>Titulo</p>
-                <div id="local">
-                    <p>Localização</p>
-                    <button>ver mais -></button>
-                </div>
-            </div>
-            <div id="imovel-destaque">
-                <img src="https://s2.glbimg.com/hgr-hkZrLEUkH7htrD4XmdHO5lg=/512x320/smart/e.glbimg.com/og/ed/f/original/2015/04/16/casa-juliana-pippi-florianopolis-01.jpg">
-                <h4>R$ 2.000,00</h4>
-                <p>Titulo</p>
-                <div id="local">
-                    <p>Localização</p>
-                    <button>ver mais -></button>
-                </div>
-            </div>
+           
         </div>
     </div>
     <div id="total">
@@ -75,8 +52,8 @@
             <h2>Todos imoveis</h2>
         </div>
         <div id="pesquisar">
-            <input placeholder="Ex.: Imovel, Proprietario, tipo de alocação...">
-            <button>Pesquisar</button>
+            <input placeholder="Ex.: Imovel, Proprietario, tipo de alocação..." name="pesquisa">
+            <button type="button" onclick="pesquisar()">Pesquisar</button>
         </div>
         <div id="filtro">
             <input placeholder="area total">
@@ -101,37 +78,26 @@
             
             <button>Filtrar</button>            
         </div>
-            <div id="secao-total">
-                <div id="imovel-todos">
-                    <img src="https://s2.glbimg.com/hgr-hkZrLEUkH7htrD4XmdHO5lg=/512x320/smart/e.glbimg.com/og/ed/f/original/2015/04/16/casa-juliana-pippi-florianopolis-01.jpg">
-                    <h4>R$ 2.000,00</h4>
-                    <p>Titulo</p>
-                    <div id="local">
-                    <p>Localização</p>
-                    <button>ver mais -></button>
-                    </div>
-                </div>
-                <div id="imovel-todos">
-                    <img src="https://s2.glbimg.com/hgr-hkZrLEUkH7htrD4XmdHO5lg=/512x320/smart/e.glbimg.com/og/ed/f/original/2015/04/16/casa-juliana-pippi-florianopolis-01.jpg">
-                    <h4>R$ 2.000,00</h4>
-                    <p>Titulo</p>
-                    <div id="local">
-                    <p>Localização</p>
-                    <button>ver mais -></button>
-                    </div>
-                </div>
-                <div id="imovel-todos">
-                    <img src="https://s2.glbimg.com/hgr-hkZrLEUkH7htrD4XmdHO5lg=/512x320/smart/e.glbimg.com/og/ed/f/original/2015/04/16/casa-juliana-pippi-florianopolis-01.jpg">
-                    <h4>R$ 2.000,00</h4>
-                    <p>Titulo</p>
-                    <div id="local">
-                    <p>Localização</p>
-                    <button>ver mais -></button>
-                    </div>
-                </div>
-        </div>
+             <div id="secao-total">
+                
+             </div>
     </div>    
     <div id="footer">
             <p>Todos os direitos reservados Imoveis © 2023.</p>
     </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const token = localStorage.getItem('token');
+        const user = localStorage.getItem('user');
+        if (token) {
+            // Faça o que for necessário com o token (por exemplo, enviar em requisições para a API)
+            console.log('Token recuperado na página home:', token);
+            console.log('usuario: ', user)
+        } else {
+            // O token não está disponível, o usuário pode não estar autenticado
+            console.log('Token não encontrado');
+        }
+    });
+    </script>
 </body>

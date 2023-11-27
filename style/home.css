@@ -211,10 +211,17 @@ body {
 
 
 #secao-total {
-    display: flex; 
+    display: flex;  
+    width: 100%;
 }
 
-#imovel-todos {
+.grupo-dinamico{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+
+.imovel-dinamico {
     margin-left: 280px; 
     border: 1px solid #ccc; 
     padding: 20px; 
@@ -227,7 +234,7 @@ body {
     margin-bottom: 50px;
 }
 
-#imovel-todos img {
+.imovel-dinamico img {
     width: calc(100% - 10px); 
     height: auto; 
     display: block; 
@@ -239,11 +246,11 @@ body {
 }
 
 
-#imovel-todos p {
+.imovel-dinamico p {
     margin-top: 20px; 
 }
 
-#imovel-todos h4{
+.imovel-dinamico h4{
     margin-top: 8px;
     font-size: 18px;
     text-align: left;
