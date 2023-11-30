@@ -15,52 +15,51 @@ document.addEventListener('DOMContentLoaded', () => {
             return; 
         }
 
-        const dataProprietario = {
-            nome: nome,
-            creci: creci,
-            endereco: endereco,
-            email: email,
-            telefone: telefone
-        };
-
-        // Enviar para o primeiro endpoint (criarProprietario)
-        const request1 = fetch(`http://localhost:8080/funcionarios/criarFuncionario/${id}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(dataProprietario)
-        });
-
-        // Enviar para o terceiro endpoint (/auth/register)
         const authRegisterData = {
             login: creci,
             password: senha,
             role: "FUNCIONARIO"
-            // Você pode adicionar mais dados se necessário
         };
 
-        const request2 = fetch('http://localhost:8080/auth/register', {
+        fetch('http://localhost:8080/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(authRegisterData)
+        })
+        .then(response1 => {
+            if(response1.ok){
+                const dataProprietario = {
+                    nome: nome,
+                    creci: creci,
+                    endereco: endereco,
+                    email: email,
+                    telefone: telefone
+                };
+
+                return fetch(`http://localhost:8080/funcionarios/criarFuncionario/${id}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dataProprietario)
+                });
+            } else{
+                throw new Error('Este CRECI ja esta cadastrado!');
+            }
+        })
+        .then(response2 => {
+            if (response2.ok) {
+                console.log('Funcionário criado e registrado com sucesso!');
+                window.location.href = 'todos-funcionarios.html';
+            } else {
+                throw new Error('Erro ao criar funcionário');
+            }
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            alert(error.message);
         });
-
-        Promise.all([request1, request2])
-            .then(responses => {
-                const [response1, response2] = responses;
-
-                if (response1.ok && response2.ok) {
-                    console.log('Ambas as requisições foram bem-sucedidas!');
-                    window.location.href = 'todos-funcionarios.html'; 
-                } else {
-                    console.error('Erro em uma ou ambas as requisições');
-                }
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-            });
     });
 });

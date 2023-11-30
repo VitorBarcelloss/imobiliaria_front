@@ -14,52 +14,53 @@ document.addEventListener('DOMContentLoaded', () => {
             return; 
         }
 
-        const dataProprietario = {
-            nome: nome,
-            cpf: cpf,
-            endereco: endereco,
-            email: email,
-            telefone: telefone
-        };
-
-        // Enviar para o primeiro endpoint (criarProprietario)
-        const request1 = fetch('http://localhost:8080/proprietario/criarProprietario', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(dataProprietario)
-        });
-
-        // Enviar para o terceiro endpoint (/auth/register)
         const authRegisterData = {
             login: cpf,
             password: senha,
             role: "PROPRIETARIO"
-            // Você pode adicionar mais dados se necessário
         };
 
-        const request2 = fetch('http://localhost:8080/auth/register', {
+        fetch('http://localhost:8080/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(authRegisterData)
+        })
+        .then(response => {
+            if(response.ok){
+                console.log("Usuário registrado");
+                const dataProprietario = {
+                    nome: nome,
+                    cpf: cpf,
+                    endereco: endereco,
+                    email: email,
+                    telefone: telefone
+                };
+
+                return fetch('http://localhost:8080/proprietario/criarProprietario', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dataProprietario)
+                });
+            } else{
+                throw new Error("Este CPF já está cadastrado!");
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Proprietário criado');
+                console.log('Ambas as requisições foram bem-sucedidas!');
+                window.location.href = 'login-proprietario.html';
+            } else {
+                throw new Error('Erro ao criar proprietário');
+            }
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            alert(error.message);
         });
-
-        Promise.all([request1, request2])
-            .then(responses => {
-                const [response1, response2] = responses;
-
-                if (response1.ok && response2.ok) {
-                    console.log('Ambas as requisições foram bem-sucedidas!');
-                    window.location.href = 'login-proprietario.html'; 
-                } else {
-                    console.error('Erro em uma ou ambas as requisições');
-                }
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-            });
     });
 });
