@@ -1,0 +1,40 @@
+<head>
+    <link rel="stylesheet" href="/imobiliaria_front/style/index.css">
+    
+    <title>Imobiliaria</title>
+</head>
+<body>
+    <div id="page">
+        <div id="imagem">
+            <img src="https://beatrizcandido.adv.br/wp-content/uploads/2021/02/imagem.jpg">
+        </div>
+        <div id="inicio">
+                <h4>Bem vindo!</h4>
+                <button id="empresa">Empresa</button>
+                <button id="funcionario">Funcionario</button>
+                <button id="proprietario">Proprietario</button>    
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const empresa = document.getElementById('empresa');
+    const funcionario = document.getElementById('funcionario');
+    const proprietario = document.getElementById('proprietario');
+
+    empresa.addEventListener('click', () => {
+        
+        window.location.href = 'empresa/login-empresa.html';
+    });
+
+    funcionario.addEventListener('click', () => {
+        
+        window.location.href = 'funcionario/login-funcionario.html';
+    });
+
+    proprietario.addEventListener('click', () => {
+        
+        window.location.href = 'proprietario/login-proprietario.html';
+    });
+});
+    </script>
+</body>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="../style/detalhar-imovel.css">
+    <script src="../js/bt-entrar.js"></script>
+    <script src="../js/detalhar-imovel.js"></script>
+    <title>Imobiliaria</title>
+</head>
+<body>
+    <header id="header">
+        <div id="logo">
+            <h2>LOGO</h2>
+        </div>
+        <div id="opt">
+            <a href="#">Home</a>
+            <a href="#">Anuncios</a>
+            <a href="#">Contato</a>
+        </div>
+        <div id="entrar">
+            <button id="voltar">Voltar</button>
+        </div>
+    </header>
+
+    <div id="caixa">
+        <div id="superior">
+            <div class="local">
+                <a id="estado" href="">Estado ></a>
+                <a id="regiao" href=""> Região</a>
+            </div>
+            <a id="titulo">titulo</a>
+            <a id="precoSup"></a>
+            <div class="foto"><img src="" alt="" class="fotoPrincipal"></div>
+        </div>
+        <div id="proprietario">
+            <a id="nome"> </a><br><br>
+            <a id="telefone"></a>
+        </div>
+        <div id="inferior">
+                <a id="precoInf"></a><a id="precoCondominio"></a><a id="precoIPTU"></a>
+                <a id="IPTU">IPTU</a><a id="condominio">Condominio</a>
+                <div id="descricao"></div>
+                <div id="localizacao">
+                    <a id="loc">Localização</a><br><br>
+                    <a id="rua"></a><br><br>
+                    <a id="proximidade">Centro Florinopólis-SC</a><br><br>
+                    <a id="cep"></a>
+                </div>
+                <div id="caracteristicas">
+                    <a id="principais">Caracteristicas principais</a><br><br>
+                    <a id="tipo">Tipo de venda: </a><br><br>
+                    <a id="mobilia"> Mobiliado ou não</a><br><br>
+                    <a id="quartos"> Nº de quartos:</a><br><br>
+                    <a id="tamanho"> Área: 99 m²</a><br><br>
+                    <a id="comodos"> Comodos gerais: </a><br><br>
+                </div>
+        </div>
+
+    </div>
+   
+    <div id="footer">
+            <p>Todos os direitos reservados Imoveis © 2023.</p>
+    </div>
+
+    <script>
+        document.getElementById('voltar').addEventListener('click', function() {
+    history.back();
+    });
+    </script>
+</body>

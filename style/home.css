@@ -227,7 +227,7 @@ body {
     padding: 20px; 
     position: relative; 
     width: 200px;
-    height: 250px;
+    height: 300px;
     border-radius: 20px;
     background-color: #EAB28A;
     margin-top: 80px;
@@ -236,7 +236,7 @@ body {
 
 .imovel-dinamico img {
     width: calc(100% - 10px); 
-    height: auto; 
+    height: 50%; 
     display: block; 
     margin: 0 auto 0; 
     top: 0;

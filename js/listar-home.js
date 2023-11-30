@@ -16,7 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
           const divGrupo = document.createElement('div');
           divGrupo.classList.add('grupo-dinamico');
           for (let i = 0; i < grupos; i++) {
-            for (let j = i * 3; j < (i + 1) * 3 && j < data.length; j++) {
+            
+            var tamanho = 6;
+            if(data.length<6){
+                tamanho = data.length
+            }
+
+            for (let j = i * 3; j < (i + 1) * 3 && j < tamanho; j++) {
               const imovel = data[j];
   
               const divImovel = document.createElement('div');

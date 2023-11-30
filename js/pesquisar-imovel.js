@@ -1,11 +1,14 @@
 function pesquisar() {
-    const secaoTotal = document.getElementById('secao-total');
-    const pesquisa = document.getElementById('pesquisar').value;
+  const secaoTotal = document.getElementById('secao-total');
+  const inputPesquisa = document.querySelector('input[name=pesquisa]');
+  const pesquisa = inputPesquisa.value;
 
-    if(pesquisa==""){
-        alert("Digite alguma coisa")
-        return;
-    }
+  if (pesquisa === "") {
+      alert("Digite alguma coisa");
+      return;
+  }
+
+  secaoTotal.innerHTML = "";
   
     function criarElementoImagem(base64) {
       const imagem = document.createElement('img');

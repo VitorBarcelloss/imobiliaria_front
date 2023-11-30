@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const secaoTotal = document.getElementById('secao-total');
+    const id = localStorage.getItem('user');
   
     function criarElementoImagem(base64) {
       const imagem = document.createElement('img');
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     function buscarDadosNaAPI() {
-      fetch('http://localhost:8080/imovel/listarTodosImoveis')
+      fetch(`http://localhost:8080/imovel/listarImoveisProprietario/${id}` )
         .then(response => response.json())
         .then(data => {
           const grupos = Math.ceil(data.length / 3);

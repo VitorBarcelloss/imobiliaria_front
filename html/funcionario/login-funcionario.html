@@ -1,0 +1,75 @@
+<head>
+    <link rel="stylesheet" href="../../style/login.css">
+    
+    <title>Imobiliaria</title>
+</head>
+<body>
+    <div id="page">
+        <div id="imagem">
+            <img src="https://beatrizcandido.adv.br/wp-content/uploads/2021/02/imagem.jpg">
+        </div>
+        <div id="login">
+            <h4>Login</h4>
+            <form id="formLogin">    
+                <div id="user">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div id="senha">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <button type="submit">Entrar</button>
+            </form> 
+            <a href="../index.html">Voltar</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('formLogin').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        fazerLogin(username, password);
+    });
+});
+
+function fazerLogin(username, password) {
+    if (!username || !password) {
+        alert('Por favor, preencha todos os campos!');
+        return;
+    }
+
+    fetch('http://localhost:8080/auth/login', {
+        method: 'POST',
+        body: JSON.stringify({
+            login: username,
+            password: password
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao fazer login');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Resposta da API:', data); 
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('user', data.user)
+        window.location.href = 'home.html';
+    })
+    .catch(error => {
+        console.error('Erro no login:', error);
+        alert('Usuário ou senha incorretos!');
+    });
+
+}
+    </script>
+</body>

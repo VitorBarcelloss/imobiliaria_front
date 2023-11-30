@@ -97,25 +97,32 @@ body {
 }
 
 #secao-total {
-    display: flex; 
+    display: flex;  
+    width: 100%;
 }
 
-#imovel-todos {
+.grupo-dinamico{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+
+.imovel-dinamico {
     margin-left: 280px; 
     border: 1px solid #ccc; 
     padding: 20px; 
     position: relative; 
     width: 200px;
-    height: 250px;
+    height: 300px;
     border-radius: 20px;
     background-color: #EAB28A;
     margin-top: 80px;
     margin-bottom: 50px;
 }
 
-#imovel-todos img {
+.imovel-dinamico img {
     width: calc(100% - 10px); 
-    height: auto; 
+    height: 50%; 
     display: block; 
     margin: 0 auto 0; 
     top: 0;
@@ -125,11 +132,11 @@ body {
 }
 
 
-#imovel-todos p {
+.imovel-dinamico p {
     margin-top: 20px; 
 }
 
-#imovel-todos h4{
+.imovel-dinamico h4{
     margin-top: 8px;
     font-size: 18px;
     text-align: left;

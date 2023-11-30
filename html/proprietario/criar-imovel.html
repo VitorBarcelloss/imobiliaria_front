@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="../../style/criar-imovel.css">
+    <script src="../../js/bt-entrar.js"></script>
+    <script src="../../js/criar-imovel.js"></script>
+    <title>Imobiliaria</title>
+</head>
+<body>
+    <header id="header">
+        <div id="logo">
+            <h2>LOGO</h2>
+        </div>
+        <div id="opt">
+            <a href="home.html">Home</a>
+            <a href="meus-anuncios.html">Meus anuncios</a>
+            <a href="contato.html">Contato</a>
+        </div>
+        <div id="entrar">
+            <button id="bt-entrar">Perfil</button>
+            <div id="menuSuspenso" style="display: none;">
+                <ul>
+                    <li><a href="alterar-proprietario.html">Alterar</a></li>
+                  <li><a href="login-proprietario.html">Sair</a></li>
+                </ul>
+              </div>
+        </div>
+    </header>
+    <div id="main">
+    <div id="central">
+        <h4>Novo anuncio</h4>
+        <label for="imagem">Imagens:</label>
+        <input type="file" name="imagem" accept="image/*" multiple>
+        <label for="nome">Nome:</label>
+        <input name="nome">
+        <label for="tipo">Tipo de imovel:</label>
+        <select name="tipo">
+            <option value="casa">Casa</option>
+            <option value="apartamento">Apartamento</option>
+            <option value="kitnet">Kitnet</option>
+            <option value="sala comercial">Sala comercial</option>
+        </select>
+        <label for="alocacao">Tipo de alocação:</label>
+        <select name="alocacao">
+            <option value="aluguel">Aluguel</option>
+            <option value="venda">Venda</option>
+        </select>
+        <label for="preco">Preço:</label>
+        <input name="preco">
+        <label for="iptu">IPTU:</label>
+        <input name="iptu">
+        <label for="condominio">Condominio:</label>
+        <input name="condominio">
+        <label for="localizacao">Localização:</label>
+        <input name="localizacao">
+        <label for="mobiliado">Mobilia:</label>
+        <select name="mobiliado">
+            <option value="mobiliado">Mobiliado</option>
+            <option value="semi-mobiliado">Semi-mobiliado</option>
+            <option value="sem mobilia">Sem mobilia</option>
+        </select>
+        <label for="tamanho">Qual tamanho do seu imovel?</label>
+        <input name="tamanho">
+        <label for="comodos">Quantos comodos tem seu imovel?</label>
+        <input name="comodos">
+        <label for="quartos">Quantos quartos tem seu imovel?</label>
+        <input name="quartos">
+        <label for="cep">CEP:</label>
+        <input name="cep">
+        <label for="descricao">Descrição:</label>
+        <input name="descricao" id="descricao">
+        <button name="botao">Criar</button>
+       
+    </div>
+    </div>
+    <div id="footer">
+        <p>Todos os direitos reservados Imoveis © 2023.</p>
+    </div>
+    </body>

@@ -49,6 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
               const botaoVerMais = document.createElement('button');
               botaoVerMais.textContent = 'Ver mais ->';
+              botaoVerMais.addEventListener("click", function () {
+                window.location.href = `../detalhar-imovel.html?id=${imovel.imovelId}`;
+            });
+              botaoVerMais.setAttribute('imovelId', imovel.imovelId)
               divLocal.appendChild(botaoVerMais);
   
               divImovel.appendChild(divLocal);

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="../../style/todos-funcionarios.css">
+    <script src="../../js/bt-entrar.js"></script>
+    <script src="../../js/todos-funcionarios.js"></script>
+    <title>Imobiliaria</title>
+</head>
+<body>
+    <header id="header">
+        <div id="logo">
+            <h2>LOGO</h2>
+        </div>
+        <div id="opt">
+            <a href="home.html">Home</a>
+            <a href="anuncios.html">Anuncios</a>
+            <a href="#">Funcionarios</a>
+            <a href="contato.html">Contato</a>
+        </div>
+        <div id="entrar">
+            <button id="bt-entrar">Perfil</button>
+            <div id="menuSuspenso" style="display: none;">
+                <ul>
+                    <li><a href="alterar-empresa.html">Alterar</a></li>
+                  <li><a href="login-empresa.html">Sair</a></li>
+                </ul>
+              </div>
+        </div>
+    </header>
+    <div style="position: absolute; top: 50px; left: 750px; font-weight: bold; font-size: 40px; "> <p> Todos Funcionarios</p></div>
+    <button id="adicionar" style="position: absolute; padding-left: 20px; padding-right: 20px; padding:10px; top: 146px; left: 840px; border-radius: 5px;">Adicionar Funcionário</button>
+        
+
+        <div id="caixa">
+            <div id="lista" class="funcionarios-lista" style="margin-top: 50px; margin-left: 50px;">
+                <!-- Aqui você pode gerar dinamicamente as listas com JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <p>Todos os direitos reservados Imóveis © 2023.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const adicionar = document.getElementById('adicionar');
+   
+    adicionar.addEventListener('click', () => {
+        
+        window.location.href = 'cadastro-funcionario.html';
+    });
+    });
+    </script>
+</body>

@@ -3,22 +3,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     button.addEventListener('click', () => {
         const nome = document.querySelector('input[name=nome]').value;
-        const cnpj = document.querySelector('input[name=cnpj]').value;
+        const cpf = document.querySelector('input[name=cpf]').value;
         const endereco = document.querySelector('input[name=endereco]').value;
         const email = document.querySelector('input[name=email]').value;
         const telefone = document.querySelector('input[name=telefone]').value;
         const senha = document.querySelector('input[name=senha]').value;
 
+        if (nome === '' || cpf === '' || endereco === '' || email === '' || telefone === '' || senha === '') {
+            alert('Por favor, preencha todos os campos.');
+            return; 
+        }
+
         const dataProprietario = {
             nome: nome,
-            cnpj: cnpj,
+            cpf: cpf,
             endereco: endereco,
             email: email,
             telefone: telefone
         };
 
         // Enviar para o primeiro endpoint (criarProprietario)
-        const request1 = fetch('http://localhost:8080/empresa/criarEmpresa', {
+        const request1 = fetch('http://localhost:8080/proprietario/criarProprietario', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -28,9 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Enviar para o terceiro endpoint (/auth/register)
         const authRegisterData = {
-            login: cnpj,
+            login: cpf,
             password: senha,
-            role: "EMPRESA"
+            role: "PROPRIETARIO"
             // Você pode adicionar mais dados se necessário
         };
 
@@ -48,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response1.ok && response2.ok) {
                     console.log('Ambas as requisições foram bem-sucedidas!');
-                    window.location.href = 'login-empresa.html'; 
+                    window.location.href = 'login-proprietario.html'; 
                 } else {
                     console.error('Erro em uma ou ambas as requisições');
                 }

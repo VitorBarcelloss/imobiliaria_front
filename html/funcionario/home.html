@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <link rel="stylesheet" href="../style/home.css">
-    <script src="../js/bt-entrar.js"></script>
-    <script src="../js/listar-todos.js"></script>
-    <script src="../js/listar-relevancia.js"></script>
-    <script src="../js/pesquisar-imovel.js"></script>
+    <link rel="stylesheet" href="../../style/home.css">
+    <script src="../../js/bt-entrar.js"></script>
+    <script src="../../js/listar-home.js"></script>
+    <script src="../../js/listar-relevancia.js"></script>
+    <script src="../../js/pesquisar-imovel.js"></script>
     <title>Imobiliaria</title>
 </head>
 <body>
@@ -22,9 +22,7 @@
             <button id="bt-entrar">Perfil</button>
             <div id="menuSuspenso" style="display: none;">
                 <ul>
-                  <li><a href="#">Meu perfil</a></li>
-                  <li><a href="#">Mensagem</a></li>
-                  <li><a href="login.html">Sair</a></li>
+                  <li><a href="login-funcionario.html">Sair</a></li>
                 </ul>
               </div>
         </div>
@@ -55,29 +53,6 @@
             <input placeholder="Ex.: Imovel, Proprietario, tipo de alocação..." name="pesquisa">
             <button type="button" onclick="pesquisar()">Pesquisar</button>
         </div>
-        <div id="filtro">
-            <input placeholder="area total">
-            <input placeholder="preço min.">
-            <input placeholder="preço max.">
-            <select id="tipo-imovel">
-                <option value="casa">casa</option>
-                <option value="kitnet">kitnet</option>
-                <option value="apartamento">apartamento</option>
-            </select>
-            <select id="tipo-alocacao">
-                <option value="venda">venda</option>
-                <option value="aluguel">aluguel</option>
-            </select>
-            <select id="mobilia">
-                <option value="mobiliado">mobiliado</option>
-                <option value="semi-mobiliado">semi-mobiliado</option>
-                <option value="sem mobilia">sem mobilia</option>
-            </select>
-            <label for="relevancia">Relevancia</label>
-            <input type="checkbox" id="relevancia" name="relevancia" value="true">
-            
-            <button>Filtrar</button>            
-        </div>
              <div id="secao-total">
                 
              </div>
@@ -86,18 +61,32 @@
             <p>Todos os direitos reservados Imoveis © 2023.</p>
     </div>
 
+   
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const token = localStorage.getItem('token');
-        const user = localStorage.getItem('user');
-        if (token) {
-            // Faça o que for necessário com o token (por exemplo, enviar em requisições para a API)
-            console.log('Token recuperado na página home:', token);
-            console.log('usuario: ', user)
-        } else {
-            // O token não está disponível, o usuário pode não estar autenticado
-            console.log('Token não encontrado');
-        }
-    });
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('token');
+            const user = localStorage.getItem('user');
+            let role = ''; // Defina a role como vazio inicialmente
+    
+            // Exemplo de obtenção da role do token
+            if (token) {
+                const decodedToken = JSON.parse(atob(token.split('.')[1]));
+                if (decodedToken && decodedToken.role) {
+                    role = decodedToken.role;
+                }
+            }
+    
+            // Modificando o link "Anuncios" com base na role do usuário
+            const anunciosLink = document.querySelector('#opt a[href="anuncios.html"]');
+            if (anunciosLink) {
+                if (role === 'FUNCIONARIO') {
+                    anunciosLink.setAttribute('href', 'meus-anuncios-funcionario.html');
+                } else if (role === 'PROPRIETARIO') {
+                    anunciosLink.setAttribute('href', 'meus-anuncios-proprietario.html');
+                } else if (role === 'EMPRESA') {
+                    anunciosLink.setAttribute('href', 'anuncios-funcionarios-empresa.html');
+                }
+            }
+        });
     </script>
 </body>

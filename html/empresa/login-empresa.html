@@ -1,4 +1,33 @@
-document.addEventListener('DOMContentLoaded', function() {
+<head>
+    <link rel="stylesheet" href="../../style/login.css">
+    
+    <title>Imobiliaria</title>
+</head>
+<body>
+    <div id="page">
+        <div id="imagem">
+            <img src="https://beatrizcandido.adv.br/wp-content/uploads/2021/02/imagem.jpg">
+        </div>
+        <div id="login">
+            <h4>Login</h4>
+            <form id="formLogin">    
+                <div id="user">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div id="senha">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <button type="submit">Entrar</button>
+            </form> 
+            <a href="cadastro-empresa.html">Cadastre-se</a>
+            <a href="../index.html">Voltar</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('formLogin').addEventListener('submit', function(e) {
         e.preventDefault();
 
@@ -32,7 +61,7 @@ function fazerLogin(username, password) {
         return response.json();
     })
     .then(data => {
-        console.log('Resposta da API:', data); // Adicionando log da resposta da API
+        console.log('Resposta da API:', data); 
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', data.user)
         window.location.href = 'home.html';
@@ -43,3 +72,5 @@ function fazerLogin(username, password) {
     });
 
 }
+    </script>
+</body>
